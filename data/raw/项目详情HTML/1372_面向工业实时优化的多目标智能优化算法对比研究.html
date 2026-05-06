@@ -1,0 +1,582 @@
+<html lang="en" class="no-js" data-immersive-translate-page-theme="light"><script id="allow-copy_script">(function agent() {
+    let unlock = false
+    document.addEventListener('allow_copy', (event) => {
+      unlock = event.detail.unlock
+    })
+
+    const copyEvents = [
+      'copy',
+      'cut',
+      'contextmenu',
+      'selectstart',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'keydown',
+      'keypress',
+      'keyup',
+    ]
+    const rejectOtherHandlers = (e) => {
+      if (unlock) {
+        e.stopPropagation()
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+      }
+    }
+    copyEvents.forEach((evt) => {
+      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+        capture: true,
+      })
+    })
+  })()</script><!--<![endif]--><head><meta name="renderer" content="webkit">
+<!-- 头部 -->
+
+<meta charset="utf-8">
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+
+<meta name="renderer" content="webkit">
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta content="" name="description">
+
+<meta content="" name="author">
+
+
+
+
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/bootstrap.min.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/font-awesome/css/font-awesome.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/font-awesome/myfont/iconfont.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- å­ä½ -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/myfonts/style.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/jidi-fonts/iconfont.css?vpn-6&amp;v=1539">
+<!-- datatable -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/jqGrid/ui.jqgrid.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- æç¤ºçªå£ -->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/zeroModal/zeroModal.css?vpn-6&amp;v=1539">
+<!-- select2 -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/select2/select2.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- èªå®ä¹é¡¹ç®css -->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/css/common.css?vpn-6&amp;v=1539">
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/css/chuangkou.css?vpn-6&amp;v=1539">
+<!--loading-->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/loading/loaders.css?vpn-6">
+
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/showloading/css/showLoading.css?vpn-6">
+
+
+
+
+<title>面向工业实时优化的多目标智能优化算法对比研究-清华大学研究生社会实践系统</title>
+
+<!-- 
+<style type="text/css">
+ label.error{color:#f40;margin-left: 24px;}
+
+
+label.error:before{   
+ content: '';
+    position: absolute;
+    left: 117px;
+    bottom: 2px;
+    width: 16px;
+    height: 16px;
+    background: url(/res/app/project/img/yanzheng_error.png) center no-repeat;
+    background-size: cover;}
+
+
+</style> 
+ -->
+<link rel="stylesheet" href="https://webvpn.tsinghua.edu.cn/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/laydate/theme/default/laydate.css?vpn-6&amp;v=5.0.9" id="layuicss-laydate"><style>.cke{visibility:hidden;}</style><style type="text/css">@font-face { font-family: TencentSans; src: url("chrome-extension://bcgpmkngbhpgdgbjgbaoddljkbabdkmm/static/fonts/TencentSans.woff2"); }</style></head>
+
+<body class="   pace-done pace-done"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+	<!--顶部-->
+	
+
+
+<header class="header">
+
+<meta charset="utf-8">
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+
+<meta name="renderer" content="webkit">
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta content="" name="description">
+
+<meta content="" name="author">
+
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/bootstrap.min.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/font-awesome/css/font-awesome.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/font-awesome/myfont/iconfont.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- å­ä½ -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/myfonts/style.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/jidi-fonts/iconfont.css?vpn-6&amp;v=1539">
+<!-- datatable -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/jqGrid/ui.jqgrid.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- æç¤ºçªå£ -->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/zeroModal/zeroModal.css?vpn-6&amp;v=1539">
+<!-- select2 -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/select2/select2.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- èªå®ä¹é¡¹ç®css -->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/css/common.css?vpn-6&amp;v=1539">
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/css/chuangkou.css?vpn-6&amp;v=1539">
+<!--loading-->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/loading/loaders.css?vpn-6">
+
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/showloading/css/showLoading.css?vpn-6">
+
+
+
+
+	<div class="w">
+	    <div class="left">
+	         <img src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/img/qh-logo.png.png?vpn-1" height="52" width="376">
+	    </div>
+	    <div class="right fr">
+	        <ul class="header_nav">
+	            <!--<li><i class="fa fa-user"></i>陈怀楚</li>-->
+	            <li id="setting" class="">
+	                <a><i class="icon iconfont icon-yonghu"></i><span>朱颖雷</span><!-- <i class="icon iconfont icon-jiantouxia"></i> --></a>
+	                <!--<div id="dw">-->
+	                <!--<ul style="">-->
+	                <!--&lt;!&ndash;<div class="triangle"></div>&ndash;&gt;-->
+	                <!--<li id="password">修改密码</li>-->
+	                <!--&lt;!&ndash;<li id="stmail"><span>设置邮箱</span></li>&ndash;&gt;-->
+	                <!--</ul>-->
+	                <!--</div>-->
+	            </li>
+	            <li id="roleList_li" class="">
+	                <a>
+	                    <i class="icon iconfont"></i>角色研究生<i class="icon iconfont icon-jiantouxia"></i>
+	                </a>
+	            </li>
+	            <li><a href="javascript:void(0);" onclick="var vpn_return;eval(vpn_rewrite_js((function () { beforeLogout(); }).toString().slice(14, -2), 2));return vpn_return;"><i class="icon iconfont icon-tuichuxitong"></i>退出</a></li>
+	        </ul>
+	    </div>
+	</div>
+</header>
+	<script src="https://webvpn.tsinghua.edu.cn/https/77726476706e69737468656265737421f9f30f8834396657761d88e29d51367bcfe7/res/app/browser/checkBrowser.js?vpn-7"></script>
+<!-- Mainly scripts -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/jquery-2.1.1.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/bootstrap.min.js?vpn-7&amp;v=1539"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/laydate/laydate.js?vpn-7&amp;v=1539"></script>
+<!-- select2 -->
+<!--<link href="css/plugins/select2/select2.css" rel="stylesheet">-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/select2/select2.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/metisMenu/jquery.metisMenu.js?vpn-7&amp;v=1539"></script>
+<!-- Custom and plugin javascript -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/pace/pace.min.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/template.js?vpn-7&amp;v=1539"></script>
+<!-- jqGrid -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jqGrid/i18n/grid.locale-cn.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jqGrid/jquery.jqGrid.min.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jquery-ui/jquery-ui.min.js?vpn-7" type="text/javascript" charset="utf-8"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/tag-it/tag-it.js?vpn-7"></script>
+<!-- èªå®ä¹ -->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/common.js?vpn-7&amp;v=1539"></script>
+<!-- æç¤ºçªå£ -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/zeroModal/zeroModal.js?vpn-7&amp;v=1539"></script>
+<!--jqgridè°æ´å®½åº¦-->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/jqgraid_resize.js?vpn-7&amp;v=1539"></script>
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/loading.js?vpn-7"></script>
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/showloading/jquery.showLoading.js?vpn-7"></script>
+
+<!--liudaxiaå®ä¹çjs-->
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/utils.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/myApp.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/app.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/menuUserAction.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/myProject.js?vpn-7&amp;v=1539"></script>
+
+<!--å¯ææ¬-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/component/ckeditor/ckeditor.js?vpn-7&amp;v=1539"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/component/ckeditor/ckeditorX.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/ajaxfileupload.js?vpn-7&amp;v=1539" type="text/javascript"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/select2/dist/js/i18n/zh-CN.js?vpn-7"></script>
+
+<!--éªè¯-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/jquery.validate.js?vpn-7"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/messages_zh.js?vpn-7"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/validata.js?vpn-7"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/card.js?vpn-7"></script>
+
+<script>vpn_eval((function(){
+
+	baseUrl = '';
+
+
+}
+).toString().slice(12, -2),"");</script>
+
+
+<script>vpn_eval((function(){
+
+	//退出
+	function beforeLogout(){
+		var info='您将要退出社会实践系统';
+		MyProject.showConfirm1(info,function(){
+			 MyProject.post("/f/j_spring_security_logout",function () {
+		         window.location.href = "/";
+		     });
+		});
+	}
+
+
+}
+).toString().slice(12, -2),"");</script>
+
+
+
+<script type="text/html" id="settings_tip">
+    <ul style="">
+        <li id="password" >个人信息</li>
+        <li id="slideThree">我的申请历史</li>
+    </ul>
+</script>
+<script type="text/html" id="roleList_li_tip">
+    <ul style="">
+		
+			<li id="shsj_yjs">研究生</li>			
+		
+    </ul>
+</script>
+<script>vpn_eval((function(){
+
+    $("#setting").hover(function() {
+
+        $("#setting").append('<div id="dw"></div>');
+        var mytabhtml = template('settings_tip', {});
+        $("#dw").html(mytabhtml);
+        // if(getCookie("wlxt|nav_font")&&getCookie("wlxt|nav_font")!=" "){
+        //     $("#slideThree").addClass('yes');
+        //     $("#slideThree").children('input').prop('checked', 'checked');
+        // }
+    }, function() {
+        // debugger;
+        /* Stuff to do when the mouse leaves the element */
+        $("#dw").remove('');
+
+    }).delegate('#password', 'click', function(event) {
+    	goToXxwh();
+        /* alert("修改密码") */
+
+    }).delegate('#slideThree', 'click', function(event) {
+    	goToSqls(); 
+    	/* alert("设置"); */
+    });
+    $("#roleList_li").hover(function() {
+
+        $("#roleList_li").append('<div id="dw"></div>');
+        var mytabhtml = template('roleList_li_tip', {});
+        $("#dw").html(mytabhtml);
+        // if(getCookie("wlxt|nav_font")&&getCookie("wlxt|nav_font")!=" "){
+        //     $("#slideThree").addClass('yes');
+        //     $("#slideThree").children('input').prop('checked', 'checked');
+        // }
+    }, function() {
+        // debugger;
+        /* Stuff to do when the mouse leaves the element */
+        $("#dw").remove('');
+
+    }).delegate('#shsj_swb', 'click', function(event) {
+       window.location.href="/f/main?role=shsj_swb";
+
+    }).delegate('#shsj_ygz', 'click', function(event) {
+		window.location.href="/f/main?role=shsj_ygz";
+
+    }).delegate('#shsj_jd', 'click', function(event) {
+		window.location.href="/f/main?role=shsj_jd";
+
+    }).delegate('#shsj_yjs', 'click', function(event) {
+		window.location.href="/f/main?role=shsj_yjs";
+
+    });
+  
+	//维护个人信息
+	function goToXxwh(){
+        zeroModal.show({
+            title: '个人信息', 
+            url: '/f/xtgl/v_xs_yjs_grxxb/xs/beforeView',
+            width: '800px',
+            height: '500px',
+            overlay: true,
+            ok: true,
+            okTitle:"提交",
+            cancel: true,
+            cancelTitle: "取消",
+            buttons: [{ className: 'btn btn-sub', name: '提交', fn:function(opt){
+            	var validate = MyProject.validateForm("editGrxxb",{
+                    rules:{
+                    	email:{
+                    		email:true,
+                    		required:true
+                        },
+                        lxdhsj:{
+                        	number:true,
+                    		minlength: 11,
+                    		maxlength: 11,
+                    		required:true
+                        }, 
+                        lxdhzj:{
+                        	required:true
+                        },ssdz:{
+                        	required:true
+                        }
+                    },                 
+                    messages:{
+                    	lxdhsj:'只能填写11位数字'
+                    }
+                });
+            	if(!validate){
+                    return false;
+                }
+                var addUrl = "/b/xtgl/v_xs_yjs_grxxb/xs/addOrEdit";    
+                MyProject.submit(addUrl,$("#editGrxxb"),function (data) {
+	                if (data.result == 'success') {
+	                    MyProject.showSuccess1(data.msg);
+	                } else {
+	                    MyProject.showError1(data.msg);
+	                }
+	            });
+	            return false;
+            }},{ className: 'btn', name: '取消', fn:function(opt){
+                
+            }}], 
+            onComplete: function() {				
+                
+            }
+        });
+	}
+	
+	//我的申请历史
+    function goToSqls(){	
+    	window.location.href="/f/xs/v_shsj_xs_xsxmb/yjs/beforePageList";	
+    }
+	
+           
+
+
+}
+).toString().slice(12, -2),"");</script>
+	<!--主体-->
+	<div class="content">
+		<form id="applyForm" name="applyForm">
+			<input type="hidden" id="xmid" name="xmid" value="26ef84e89cf5aeee019d3cc23acb02f7">
+			<div class="cot">
+				<div class="title">面向工业实时优化的多目标智能优化算法对比研究</div>
+				<div class="myrow">
+					
+					
+					 <span class="biaoqian"> 
+							<i>国企重点</i>
+						
+							<i>科研单位</i>
+						
+					</span>
+				</div>
+			</div>
+
+			<div class="cot_info">
+				<div class="">
+					<div class="panel-heading">
+						<i class="icon iconfont icon-biaotifuhao"></i><span>项目基本情况</span>
+					</div>
+					<div class="panel-body">
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>项目编号：</label> <span>740226-2026-0001-1</span>
+								<!--<i class="bitian_star">*</i>-->
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>所属基地编号：</label> <span>740226</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>所属基地名称：</label> <span>国家能源集团</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>研究方向：</label> <span>控制科学与工程、化学工程与技术、能源动力、动力工程及工程热物理</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>预计工作量(天)：</label> <span>天</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label class="mt-2">所需准备工作：</label> <span class="line-height-24">1.理解多目标优化算法及代码编写；
+2.尽量熟悉化工工业工艺过程和模拟技术。
+								</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label class="mt-2">是否重点项目：</label> <span class="line-height-24">否
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="">
+					<div class="panel-heading">
+						<i class="icon iconfont icon-biaotifuhao"></i><span>单位信息</span>
+					</div>
+					<div class="panel-body">
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>单位名称：</label> <span>北京低碳清洁能源研究院</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-6">
+								<label>单位省市：</label> <span>北京市</span>
+							</div>
+							<div class="col-md-6">
+								<label>单位区县：</label> <span>昌平区</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>单位地址：</label> <span>北京市昌平区未来科学城滨河大道9号院</span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="">
+					<div class="panel-heading">
+						<i class="icon iconfont icon-biaotifuhao"></i><span>任务描述</span>
+					</div>
+					<div class="panel-body">
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label class="mt-2">项目背景：</label> <span class="line-height-24">在双碳目标及能源结构转型的背景下，煤气化作为现代煤化工的核心龙头技术，其运行效率与稳定性直接决定了下游合成氨、甲醇及煤制油等产业的经济性。然而，气化炉内部涉及极其复杂的非线性热力学反应与多相流耦合，传统依靠人工经验调节或大型机理软件在线迭代的方式，难以满足工业现场对“分钟级”实时优化（RTO）的响应需求。本项目旨在针对煤质波动、负荷调整等实际工况，探索一种兼具计算效率与物理可解释性的智能优化方案，通过对冷煤气效率、碳转化率及有效气含量等多目标的权衡，实现从“经验调度”向“数据-机理驱动的智能控制”跨越，为建设独立可控的现代煤化工智能监测平台提供算法核心支撑。
+								</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>项目目标：</label> <span>本项目目标是针对煤气化工艺的多目标优化问题，建立并对比一套涵盖经典进化算法、贝叶斯优化及基于自动微分的梯度优化算法库。要求博士生在6周时间内，利用 Python等高性能计算框架，构建气化工艺的轻量化代理模型，并深入研究不同算法在处理强约束、非线性目标时的收敛速度、解集多样性及系统鲁棒性。最终需交付一套能够在分钟级时间内给出平滑 Pareto 前沿轨迹的算法框架，并结合敏感度分析等手段提升优化结果的可解释性，为工艺工程师提供具有物理依据的调优决策建议，形成一套可直接指导工业闭环优化的技术方案。</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>需要解决的关键技术问题：</label> <span>本项目核心需要解决分钟级响应限制下的高维约束多目标优化求解效率与可解释性平衡问题。在煤气化这一复杂非线性系统中，提高碳转化率与降低氧煤比等目标之间存在显著的物理制约，传统的全局搜索算法在短周期内难以同时兼顾寻优深度与实时收敛速度。因此，关键技术挑战在于如何利用自动微分技术或轻量化代理模型，在复杂的工艺约束空间内快速捕捉分布均匀且平滑的 Pareto 最优前沿，并同步建立基于灵敏度分析的决策解释机制。这不仅要求算法在有限的迭代次数内给出最优操作组合，更需阐明各项工艺参数调节对目标函数影响的物理权重，从而解决优化指令在工业现场“黑盒化”导致的信任度缺失问题。</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label class="mt-2">现有条件：</label> <span class="line-height-24">当前已有对工艺过程的完整模拟模型和完备的数据集，有专门的技术人员进行技术指导。
+								</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label class="mt-2">时间安排：</label> <span class="line-height-24">第1-2周：侧重于基础准备与模型构建，实习生需快速熟悉煤气化工艺背景，在 Python/JAX 环境下搭建开发环境，并针对关键指标（如碳转化率、冷煤气效率）建立轻量化代理模型或基准算例；
+第3-4周：进入算法开发与实测核心期，重点实现具有实时寻优能力的快速算法（如基于梯度的 MGDA 或高效贝叶斯优化），并在复杂约束下进行调试，确保其满足分钟级响应的实时性要求；
+第5-6周：开展多维度对比研究与成果归纳，通过定量分析算法在计算效率、系统鲁棒性及结果可解释性（如灵敏度分析）方面的表现，完成对比研究报告并进行结题汇报。
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="btn_group btn_group_2">
+					<a class=" btn_sub btn_gray_b" onclick="var vpn_return;eval(vpn_rewrite_js((function () { window.close(); }).toString().slice(14, -2), 2));return vpn_return;">关闭</a>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<!--底部-->
+	
+<footer>清华大学 版权所有 2020</footer>
+	<!--引入的公共js-->
+	<script src="https://webvpn.tsinghua.edu.cn/https/77726476706e69737468656265737421f9f30f8834396657761d88e29d51367bcfe7/res/app/browser/checkBrowser.js?vpn-7"></script>
+<!-- Mainly scripts -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/jquery-2.1.1.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/bootstrap.min.js?vpn-7&amp;v=1539"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/laydate/laydate.js?vpn-7&amp;v=1539"></script>
+<!-- select2 -->
+<!--<link href="css/plugins/select2/select2.css" rel="stylesheet">-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/select2/select2.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/metisMenu/jquery.metisMenu.js?vpn-7&amp;v=1539"></script>
+<!-- Custom and plugin javascript -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/pace/pace.min.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/template.js?vpn-7&amp;v=1539"></script>
+<!-- jqGrid -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jqGrid/i18n/grid.locale-cn.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jqGrid/jquery.jqGrid.min.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jquery-ui/jquery-ui.min.js?vpn-7" type="text/javascript" charset="utf-8"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/tag-it/tag-it.js?vpn-7"></script>
+<!-- èªå®ä¹ -->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/common.js?vpn-7&amp;v=1539"></script>
+<!-- æç¤ºçªå£ -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/zeroModal/zeroModal.js?vpn-7&amp;v=1539"></script>
+<!--jqgridè°æ´å®½åº¦-->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/jqgraid_resize.js?vpn-7&amp;v=1539"></script>
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/loading.js?vpn-7"></script>
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/showloading/jquery.showLoading.js?vpn-7"></script>
+
+<!--liudaxiaå®ä¹çjs-->
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/utils.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/myApp.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/app.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/menuUserAction.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/myProject.js?vpn-7&amp;v=1539"></script>
+
+<!--å¯ææ¬-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/component/ckeditor/ckeditor.js?vpn-7&amp;v=1539"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/component/ckeditor/ckeditorX.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/ajaxfileupload.js?vpn-7&amp;v=1539" type="text/javascript"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/select2/dist/js/i18n/zh-CN.js?vpn-7"></script>
+
+<!--éªè¯-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/jquery.validate.js?vpn-7"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/messages_zh.js?vpn-7"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/validata.js?vpn-7"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/card.js?vpn-7"></script>
+
+<script>vpn_eval((function(){
+
+	baseUrl = '';
+
+
+}
+).toString().slice(12, -2),"");</script>
+
+
+
+
+
+
+
+
+
+</body><div id="transmart-crx-shadow-root" style="all: initial;"></div><div id="immersive-translate-browser-popup" style="all: initial"></div></html>

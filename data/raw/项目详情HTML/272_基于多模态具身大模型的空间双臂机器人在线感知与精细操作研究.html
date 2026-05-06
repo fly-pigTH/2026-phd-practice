@@ -1,0 +1,585 @@
+<html lang="en" class="no-js" data-immersive-translate-page-theme="light"><script id="allow-copy_script">(function agent() {
+    let unlock = false
+    document.addEventListener('allow_copy', (event) => {
+      unlock = event.detail.unlock
+    })
+
+    const copyEvents = [
+      'copy',
+      'cut',
+      'contextmenu',
+      'selectstart',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'keydown',
+      'keypress',
+      'keyup',
+    ]
+    const rejectOtherHandlers = (e) => {
+      if (unlock) {
+        e.stopPropagation()
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+      }
+    }
+    copyEvents.forEach((evt) => {
+      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+        capture: true,
+      })
+    })
+  })()</script><!--<![endif]--><head><meta name="renderer" content="webkit">
+<!-- 头部 -->
+
+<meta charset="utf-8">
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+
+<meta name="renderer" content="webkit">
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta content="" name="description">
+
+<meta content="" name="author">
+
+
+
+
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/bootstrap.min.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/font-awesome/css/font-awesome.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/font-awesome/myfont/iconfont.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- å­ä½ -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/myfonts/style.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/jidi-fonts/iconfont.css?vpn-6&amp;v=1539">
+<!-- datatable -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/jqGrid/ui.jqgrid.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- æç¤ºçªå£ -->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/zeroModal/zeroModal.css?vpn-6&amp;v=1539">
+<!-- select2 -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/select2/select2.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- èªå®ä¹é¡¹ç®css -->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/css/common.css?vpn-6&amp;v=1539">
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/css/chuangkou.css?vpn-6&amp;v=1539">
+<!--loading-->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/loading/loaders.css?vpn-6">
+
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/showloading/css/showLoading.css?vpn-6">
+
+
+
+
+<title>基于多模态具身大模型的空间双臂机器人在线感知与精细操作研究-清华大学研究生社会实践系统</title>
+
+<!-- 
+<style type="text/css">
+ label.error{color:#f40;margin-left: 24px;}
+
+
+label.error:before{   
+ content: '';
+    position: absolute;
+    left: 117px;
+    bottom: 2px;
+    width: 16px;
+    height: 16px;
+    background: url(/res/app/project/img/yanzheng_error.png) center no-repeat;
+    background-size: cover;}
+
+
+</style> 
+ -->
+<link rel="stylesheet" href="https://webvpn.tsinghua.edu.cn/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/laydate/theme/default/laydate.css?vpn-6&amp;v=5.0.9" id="layuicss-laydate"><style>.cke{visibility:hidden;}</style><style type="text/css">@font-face { font-family: TencentSans; src: url("chrome-extension://bcgpmkngbhpgdgbjgbaoddljkbabdkmm/static/fonts/TencentSans.woff2"); }</style></head>
+
+<body class="  pace-running pace-done"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div><div class="pace pace-active"><div class="pace-progress" data-progress-text="95%" data-progress="95" style="transform: translate3d(95.715%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+	<!--顶部-->
+	
+
+
+<header class="header">
+
+<meta charset="utf-8">
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+
+<meta name="renderer" content="webkit">
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta content="" name="description">
+
+<meta content="" name="author">
+
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/bootstrap.min.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/font-awesome/css/font-awesome.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/font-awesome/myfont/iconfont.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- å­ä½ -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/myfonts/style.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/jidi-fonts/iconfont.css?vpn-6&amp;v=1539">
+<!-- datatable -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/jqGrid/ui.jqgrid.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- æç¤ºçªå£ -->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/zeroModal/zeroModal.css?vpn-6&amp;v=1539">
+<!-- select2 -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/select2/select2.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- èªå®ä¹é¡¹ç®css -->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/css/common.css?vpn-6&amp;v=1539">
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/css/chuangkou.css?vpn-6&amp;v=1539">
+<!--loading-->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/loading/loaders.css?vpn-6">
+
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/showloading/css/showLoading.css?vpn-6">
+
+
+
+
+	<div class="w">
+	    <div class="left">
+	         <img src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/img/qh-logo.png.png?vpn-1" height="52" width="376">
+	    </div>
+	    <div class="right fr">
+	        <ul class="header_nav">
+	            <!--<li><i class="fa fa-user"></i>陈怀楚</li>-->
+	            <li id="setting" class="">
+	                <a><i class="icon iconfont icon-yonghu"></i><span>朱颖雷</span><!-- <i class="icon iconfont icon-jiantouxia"></i> --></a>
+	                <!--<div id="dw">-->
+	                <!--<ul style="">-->
+	                <!--&lt;!&ndash;<div class="triangle"></div>&ndash;&gt;-->
+	                <!--<li id="password">修改密码</li>-->
+	                <!--&lt;!&ndash;<li id="stmail"><span>设置邮箱</span></li>&ndash;&gt;-->
+	                <!--</ul>-->
+	                <!--</div>-->
+	            </li>
+	            <li id="roleList_li" class="">
+	                <a>
+	                    <i class="icon iconfont"></i>角色研究生<i class="icon iconfont icon-jiantouxia"></i>
+	                </a>
+	            </li>
+	            <li><a href="javascript:void(0);" onclick="var vpn_return;eval(vpn_rewrite_js((function () { beforeLogout(); }).toString().slice(14, -2), 2));return vpn_return;"><i class="icon iconfont icon-tuichuxitong"></i>退出</a></li>
+	        </ul>
+	    </div>
+	</div>
+</header>
+	<script src="https://webvpn.tsinghua.edu.cn/https/77726476706e69737468656265737421f9f30f8834396657761d88e29d51367bcfe7/res/app/browser/checkBrowser.js?vpn-7"></script>
+<!-- Mainly scripts -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/jquery-2.1.1.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/bootstrap.min.js?vpn-7&amp;v=1539"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/laydate/laydate.js?vpn-7&amp;v=1539"></script>
+<!-- select2 -->
+<!--<link href="css/plugins/select2/select2.css" rel="stylesheet">-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/select2/select2.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/metisMenu/jquery.metisMenu.js?vpn-7&amp;v=1539"></script>
+<!-- Custom and plugin javascript -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/pace/pace.min.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/template.js?vpn-7&amp;v=1539"></script>
+<!-- jqGrid -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jqGrid/i18n/grid.locale-cn.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jqGrid/jquery.jqGrid.min.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jquery-ui/jquery-ui.min.js?vpn-7" type="text/javascript" charset="utf-8"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/tag-it/tag-it.js?vpn-7"></script>
+<!-- èªå®ä¹ -->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/common.js?vpn-7&amp;v=1539"></script>
+<!-- æç¤ºçªå£ -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/zeroModal/zeroModal.js?vpn-7&amp;v=1539"></script>
+<!--jqgridè°æ´å®½åº¦-->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/jqgraid_resize.js?vpn-7&amp;v=1539"></script>
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/loading.js?vpn-7"></script>
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/showloading/jquery.showLoading.js?vpn-7"></script>
+
+<!--liudaxiaå®ä¹çjs-->
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/utils.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/myApp.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/app.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/menuUserAction.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/myProject.js?vpn-7&amp;v=1539"></script>
+
+<!--å¯ææ¬-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/component/ckeditor/ckeditor.js?vpn-7&amp;v=1539"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/component/ckeditor/ckeditorX.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/ajaxfileupload.js?vpn-7&amp;v=1539" type="text/javascript"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/select2/dist/js/i18n/zh-CN.js?vpn-7"></script>
+
+<!--éªè¯-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/jquery.validate.js?vpn-7"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/messages_zh.js?vpn-7"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/validata.js?vpn-7"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/card.js?vpn-7"></script>
+
+<script>vpn_eval((function(){
+
+	baseUrl = '';
+
+
+}
+).toString().slice(12, -2),"");</script>
+
+
+<script>vpn_eval((function(){
+
+	//退出
+	function beforeLogout(){
+		var info='您将要退出社会实践系统';
+		MyProject.showConfirm1(info,function(){
+			 MyProject.post("/f/j_spring_security_logout",function () {
+		         window.location.href = "/";
+		     });
+		});
+	}
+
+
+}
+).toString().slice(12, -2),"");</script>
+
+
+
+<script type="text/html" id="settings_tip">
+    <ul style="">
+        <li id="password" >个人信息</li>
+        <li id="slideThree">我的申请历史</li>
+    </ul>
+</script>
+<script type="text/html" id="roleList_li_tip">
+    <ul style="">
+		
+			<li id="shsj_yjs">研究生</li>			
+		
+    </ul>
+</script>
+<script>vpn_eval((function(){
+
+    $("#setting").hover(function() {
+
+        $("#setting").append('<div id="dw"></div>');
+        var mytabhtml = template('settings_tip', {});
+        $("#dw").html(mytabhtml);
+        // if(getCookie("wlxt|nav_font")&&getCookie("wlxt|nav_font")!=" "){
+        //     $("#slideThree").addClass('yes');
+        //     $("#slideThree").children('input').prop('checked', 'checked');
+        // }
+    }, function() {
+        // debugger;
+        /* Stuff to do when the mouse leaves the element */
+        $("#dw").remove('');
+
+    }).delegate('#password', 'click', function(event) {
+    	goToXxwh();
+        /* alert("修改密码") */
+
+    }).delegate('#slideThree', 'click', function(event) {
+    	goToSqls(); 
+    	/* alert("设置"); */
+    });
+    $("#roleList_li").hover(function() {
+
+        $("#roleList_li").append('<div id="dw"></div>');
+        var mytabhtml = template('roleList_li_tip', {});
+        $("#dw").html(mytabhtml);
+        // if(getCookie("wlxt|nav_font")&&getCookie("wlxt|nav_font")!=" "){
+        //     $("#slideThree").addClass('yes');
+        //     $("#slideThree").children('input').prop('checked', 'checked');
+        // }
+    }, function() {
+        // debugger;
+        /* Stuff to do when the mouse leaves the element */
+        $("#dw").remove('');
+
+    }).delegate('#shsj_swb', 'click', function(event) {
+       window.location.href="/f/main?role=shsj_swb";
+
+    }).delegate('#shsj_ygz', 'click', function(event) {
+		window.location.href="/f/main?role=shsj_ygz";
+
+    }).delegate('#shsj_jd', 'click', function(event) {
+		window.location.href="/f/main?role=shsj_jd";
+
+    }).delegate('#shsj_yjs', 'click', function(event) {
+		window.location.href="/f/main?role=shsj_yjs";
+
+    });
+  
+	//维护个人信息
+	function goToXxwh(){
+        zeroModal.show({
+            title: '个人信息', 
+            url: '/f/xtgl/v_xs_yjs_grxxb/xs/beforeView',
+            width: '800px',
+            height: '500px',
+            overlay: true,
+            ok: true,
+            okTitle:"提交",
+            cancel: true,
+            cancelTitle: "取消",
+            buttons: [{ className: 'btn btn-sub', name: '提交', fn:function(opt){
+            	var validate = MyProject.validateForm("editGrxxb",{
+                    rules:{
+                    	email:{
+                    		email:true,
+                    		required:true
+                        },
+                        lxdhsj:{
+                        	number:true,
+                    		minlength: 11,
+                    		maxlength: 11,
+                    		required:true
+                        }, 
+                        lxdhzj:{
+                        	required:true
+                        },ssdz:{
+                        	required:true
+                        }
+                    },                 
+                    messages:{
+                    	lxdhsj:'只能填写11位数字'
+                    }
+                });
+            	if(!validate){
+                    return false;
+                }
+                var addUrl = "/b/xtgl/v_xs_yjs_grxxb/xs/addOrEdit";    
+                MyProject.submit(addUrl,$("#editGrxxb"),function (data) {
+	                if (data.result == 'success') {
+	                    MyProject.showSuccess1(data.msg);
+	                } else {
+	                    MyProject.showError1(data.msg);
+	                }
+	            });
+	            return false;
+            }},{ className: 'btn', name: '取消', fn:function(opt){
+                
+            }}], 
+            onComplete: function() {				
+                
+            }
+        });
+	}
+	
+	//我的申请历史
+    function goToSqls(){	
+    	window.location.href="/f/xs/v_shsj_xs_xsxmb/yjs/beforePageList";	
+    }
+	
+           
+
+
+}
+).toString().slice(12, -2),"");</script>
+	<!--主体-->
+	<div class="content">
+		<form id="applyForm" name="applyForm">
+			<input type="hidden" id="xmid" name="xmid" value="26ef84e89d66aec8019d9a2366170a0b">
+			<div class="cot">
+				<div class="title">基于多模态具身大模型的空间双臂机器人在线感知与精细操作研究</div>
+				<div class="myrow">
+					
+					
+					 <span class="biaoqian"> 
+					</span>
+				</div>
+			</div>
+
+			<div class="cot_info">
+				<div class="">
+					<div class="panel-heading">
+						<i class="icon iconfont icon-biaotifuhao"></i><span>项目基本情况</span>
+					</div>
+					<div class="panel-body">
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>项目编号：</label> <span>746410-2026-1017-1</span>
+								<!--<i class="bitian_star">*</i>-->
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>所属基地编号：</label> <span>746410</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>所属基地名称：</label> <span>清华大学自动化系研究生社会实践北控所基地</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>研究方向：</label> <span>控制科学与工程、计算机科学与技术、人工智能、机器人学</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>预计工作量(天)：</label> <span>天</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label class="mt-2">所需准备工作：</label> <span class="line-height-24">具有机器人学相关基础，熟悉大语言模型（LLM）及典型具身智能（如VLA）框架；熟练掌握Python编程与PyTorch等深度学习框架；熟悉机器人仿真环境（如Isaac Sim / Isaac Lab 等）；具有双臂协同规划、强化学习/模仿学习或智能感知（三维重建/位姿估计）相关研究经验者优先。
+								</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label class="mt-2">是否重点项目：</label> <span class="line-height-24">是
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="">
+					<div class="panel-heading">
+						<i class="icon iconfont icon-biaotifuhao"></i><span>单位信息</span>
+					</div>
+					<div class="panel-body">
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>单位名称：</label> <span>北京控制工程研究所系统创新中心</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-6">
+								<label>单位省市：</label> <span>北京市</span>
+							</div>
+							<div class="col-md-6">
+								<label>单位区县：</label> <span>海淀区</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>单位地址：</label> <span>北京市海淀区友谊路104号</span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="">
+					<div class="panel-heading">
+						<i class="icon iconfont icon-biaotifuhao"></i><span>任务描述</span>
+					</div>
+					<div class="panel-body">
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label class="mt-2">项目背景：</label> <span class="line-height-24">随着在轨维修维护、地外探测等航天任务的复杂化，传统基于预编程或规则视觉感知的空间机器人已难以应对开放、非结构化环境下的作业需求。面向在轨更换单元组装、设备维修等复杂任务，空间机器人需要具备类人的多模态感知与自主推理能力。本项目针对空间未知物体识别困难、单臂视角受限、操作精度要求高等痛点，开展具身智能技术研究。通过引入主动感知、多模态触觉融合以及大模型先验知识，为空间机器人在轨感知能力演进与高可靠精细操作提供重要的方法支撑。
+								</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>项目目标：</label> <span>构建并验证一套基于多模态具身模型的双臂协同操作技术架构，具体可从以下内容中选择一个或多个完成：
+①	实现基于主动视觉探测与精细执行的双臂具身协同操控模型；
+②	融合视觉与触觉多模态信息，完成高精度操作技能的策略模型生成；
+③	研究在轨具身感知能力在线提升方法，利用大模型先验知识完成无标注样本的在线检测分割、三维重建、位姿估计与闭环操作。</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>需要解决的关键技术问题：</label> <span>①基于主动感知与协同操作的双臂具身操控架构与运动规划： 解决双臂系统中观测臂动态寻优视角与操作臂避障执行的协同策略生成问题。
+②多模态视触觉融合的精细操作技能学习： 解决单一视觉模型难以应对微小间隙装配的痛点，构建高频触觉反馈与视觉特征的对齐与融合网络。
+③大模型先验驱动的未知物体在线感知与位姿估计： 突破传统依赖大量人工标注数据的限制，研究利用基础大模型的泛化能力，实现新物体/未标注样本的检测分割、三维重建、6D位姿估计及动态决策。</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label class="mt-2">现有条件：</label> <span class="line-height-24">基地承担多项国家重点研究任务，实践需求明确，意义重大；基地在前3年承担了多名清华博士生暑期实践任务，具有完备的技术和组织保障；基地有多名智能控制相关实践导师，可提供一对一指导；实践学生可定期参加项目学术研讨会、学术论坛等活动，帮助其了解技术前沿；基地配备充足的计算资源、数据资源、试验平台，满足算法训练和验证。项目目标中的三个任务，已有一定程度的实验平台基础与算法研究基础。
+								</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label class="mt-2">时间安排：</label> <span class="line-height-24">第一周：熟悉项目背景和软硬件条件，围绕多模态具身模型与双臂协同进行前沿技术调研；构建仿真基线环境。
+第二周：确定双臂协同技术路线，在仿真或物理环境中构建主动观测臂及操作臂的任务场景，开展底层控制接口联调与协同运动规划测试。
+第三周：同步开展基于多模态具身模型的精细操作研究，基于视触觉数据集训练面向高精度操作的策略模型。
+第四周：同步研究在轨感知在线提升算法，接入大模型先验知识，针对无标注虚拟样本开展在线三维重建与位姿估计等模块的开发与测试。
+第五周：进行系统调试，开展在线感知、位姿估计与多模态双臂智能操作的闭环仿真验证。
+第六周：针对联合调试中的失效边界进行针对性算法迭代与优化；整理实验数据，总结创新点，完成结题汇报。
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="btn_group btn_group_2">
+					<a class=" btn_sub btn_gray_b" onclick="var vpn_return;eval(vpn_rewrite_js((function () { window.close(); }).toString().slice(14, -2), 2));return vpn_return;">关闭</a>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<!--底部-->
+	
+<footer>清华大学 版权所有 2020</footer>
+	<!--引入的公共js-->
+	<script src="https://webvpn.tsinghua.edu.cn/https/77726476706e69737468656265737421f9f30f8834396657761d88e29d51367bcfe7/res/app/browser/checkBrowser.js?vpn-7"></script>
+<!-- Mainly scripts -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/jquery-2.1.1.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/bootstrap.min.js?vpn-7&amp;v=1539"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/laydate/laydate.js?vpn-7&amp;v=1539"></script>
+<!-- select2 -->
+<!--<link href="css/plugins/select2/select2.css" rel="stylesheet">-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/select2/select2.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/metisMenu/jquery.metisMenu.js?vpn-7&amp;v=1539"></script>
+<!-- Custom and plugin javascript -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/pace/pace.min.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/template.js?vpn-7&amp;v=1539"></script>
+<!-- jqGrid -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jqGrid/i18n/grid.locale-cn.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jqGrid/jquery.jqGrid.min.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jquery-ui/jquery-ui.min.js?vpn-7" type="text/javascript" charset="utf-8"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/tag-it/tag-it.js?vpn-7"></script>
+<!-- èªå®ä¹ -->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/common.js?vpn-7&amp;v=1539"></script>
+<!-- æç¤ºçªå£ -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/zeroModal/zeroModal.js?vpn-7&amp;v=1539"></script>
+<!--jqgridè°æ´å®½åº¦-->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/jqgraid_resize.js?vpn-7&amp;v=1539"></script>
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/loading.js?vpn-7"></script>
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/showloading/jquery.showLoading.js?vpn-7"></script>
+
+<!--liudaxiaå®ä¹çjs-->
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/utils.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/myApp.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/app.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/menuUserAction.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/myProject.js?vpn-7&amp;v=1539"></script>
+
+<!--å¯ææ¬-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/component/ckeditor/ckeditor.js?vpn-7&amp;v=1539"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/component/ckeditor/ckeditorX.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/ajaxfileupload.js?vpn-7&amp;v=1539" type="text/javascript"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/select2/dist/js/i18n/zh-CN.js?vpn-7"></script>
+
+<!--éªè¯-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/jquery.validate.js?vpn-7"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/messages_zh.js?vpn-7"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/validata.js?vpn-7"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/card.js?vpn-7"></script>
+
+<script>vpn_eval((function(){
+
+	baseUrl = '';
+
+
+}
+).toString().slice(12, -2),"");</script>
+
+
+
+
+
+
+
+
+
+</body><div id="transmart-crx-shadow-root" style="all: initial;"></div><div id="immersive-translate-browser-popup" style="all: initial"></div></html>

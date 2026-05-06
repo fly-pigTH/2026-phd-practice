@@ -1,0 +1,586 @@
+<html lang="en" class="no-js" data-immersive-translate-page-theme="light"><script id="allow-copy_script">(function agent() {
+    let unlock = false
+    document.addEventListener('allow_copy', (event) => {
+      unlock = event.detail.unlock
+    })
+
+    const copyEvents = [
+      'copy',
+      'cut',
+      'contextmenu',
+      'selectstart',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'keydown',
+      'keypress',
+      'keyup',
+    ]
+    const rejectOtherHandlers = (e) => {
+      if (unlock) {
+        e.stopPropagation()
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+      }
+    }
+    copyEvents.forEach((evt) => {
+      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+        capture: true,
+      })
+    })
+  })()</script><!--<![endif]--><head><meta name="renderer" content="webkit">
+<!-- 头部 -->
+
+<meta charset="utf-8">
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+
+<meta name="renderer" content="webkit">
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta content="" name="description">
+
+<meta content="" name="author">
+
+
+
+
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/bootstrap.min.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/font-awesome/css/font-awesome.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/font-awesome/myfont/iconfont.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- å­ä½ -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/myfonts/style.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/jidi-fonts/iconfont.css?vpn-6&amp;v=1539">
+<!-- datatable -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/jqGrid/ui.jqgrid.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- æç¤ºçªå£ -->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/zeroModal/zeroModal.css?vpn-6&amp;v=1539">
+<!-- select2 -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/select2/select2.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- èªå®ä¹é¡¹ç®css -->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/css/common.css?vpn-6&amp;v=1539">
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/css/chuangkou.css?vpn-6&amp;v=1539">
+<!--loading-->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/loading/loaders.css?vpn-6">
+
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/showloading/css/showLoading.css?vpn-6">
+
+
+
+
+<title>碰撞假人高逼真度仿生皮肤材料研发-清华大学研究生社会实践系统</title>
+
+<!-- 
+<style type="text/css">
+ label.error{color:#f40;margin-left: 24px;}
+
+
+label.error:before{   
+ content: '';
+    position: absolute;
+    left: 117px;
+    bottom: 2px;
+    width: 16px;
+    height: 16px;
+    background: url(/res/app/project/img/yanzheng_error.png) center no-repeat;
+    background-size: cover;}
+
+
+</style> 
+ -->
+<link rel="stylesheet" href="https://webvpn.tsinghua.edu.cn/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/laydate/theme/default/laydate.css?vpn-6&amp;v=5.0.9" id="layuicss-laydate"><style>.cke{visibility:hidden;}</style><style type="text/css">@font-face { font-family: TencentSans; src: url("chrome-extension://bcgpmkngbhpgdgbjgbaoddljkbabdkmm/static/fonts/TencentSans.woff2"); }</style></head>
+
+<body class=" pace-running pace-running"><div class="pace pace-active"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div><div class="pace pace-active"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+	<!--顶部-->
+	
+
+
+<header class="header">
+
+<meta charset="utf-8">
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11">
+
+<meta name="renderer" content="webkit">
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<meta content="" name="description">
+
+<meta content="" name="author">
+
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/bootstrap.min.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/font-awesome/css/font-awesome.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/font-awesome/myfont/iconfont.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- å­ä½ -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/myfonts/style.css?vpn-6&amp;v=1539" rel="stylesheet">
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/jidi-fonts/iconfont.css?vpn-6&amp;v=1539">
+<!-- datatable -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/jqGrid/ui.jqgrid.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- æç¤ºçªå£ -->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/zeroModal/zeroModal.css?vpn-6&amp;v=1539">
+<!-- select2 -->
+<link href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/select2/select2.css?vpn-6&amp;v=1539" rel="stylesheet">
+<!-- èªå®ä¹é¡¹ç®css -->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/css/common.css?vpn-6&amp;v=1539">
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/jdxxgl-stu/css/chuangkou.css?vpn-6&amp;v=1539">
+<!--loading-->
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/loading/loaders.css?vpn-6">
+
+<link rel="stylesheet" href="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/css/plugins/showloading/css/showLoading.css?vpn-6">
+
+
+
+
+	<div class="w">
+	    <div class="left">
+	         <img src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/img/qh-logo.png.png?vpn-1" height="52" width="376">
+	    </div>
+	    <div class="right fr">
+	        <ul class="header_nav">
+	            <!--<li><i class="fa fa-user"></i>陈怀楚</li>-->
+	            <li id="setting" class="">
+	                <a><i class="icon iconfont icon-yonghu"></i><span>朱颖雷</span><!-- <i class="icon iconfont icon-jiantouxia"></i> --></a>
+	                <!--<div id="dw">-->
+	                <!--<ul style="">-->
+	                <!--&lt;!&ndash;<div class="triangle"></div>&ndash;&gt;-->
+	                <!--<li id="password">修改密码</li>-->
+	                <!--&lt;!&ndash;<li id="stmail"><span>设置邮箱</span></li>&ndash;&gt;-->
+	                <!--</ul>-->
+	                <!--</div>-->
+	            </li>
+	            <li id="roleList_li" class="">
+	                <a>
+	                    <i class="icon iconfont"></i>角色研究生<i class="icon iconfont icon-jiantouxia"></i>
+	                </a>
+	            </li>
+	            <li><a href="javascript:void(0);" onclick="var vpn_return;eval(vpn_rewrite_js((function () { beforeLogout(); }).toString().slice(14, -2), 2));return vpn_return;"><i class="icon iconfont icon-tuichuxitong"></i>退出</a></li>
+	        </ul>
+	    </div>
+	</div>
+</header>
+	<script src="https://webvpn.tsinghua.edu.cn/https/77726476706e69737468656265737421f9f30f8834396657761d88e29d51367bcfe7/res/app/browser/checkBrowser.js?vpn-7"></script>
+<!-- Mainly scripts -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/jquery-2.1.1.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/bootstrap.min.js?vpn-7&amp;v=1539"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/laydate/laydate.js?vpn-7&amp;v=1539"></script>
+<!-- select2 -->
+<!--<link href="css/plugins/select2/select2.css" rel="stylesheet">-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/select2/select2.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/metisMenu/jquery.metisMenu.js?vpn-7&amp;v=1539"></script>
+<!-- Custom and plugin javascript -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/pace/pace.min.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/template.js?vpn-7&amp;v=1539"></script>
+<!-- jqGrid -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jqGrid/i18n/grid.locale-cn.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jqGrid/jquery.jqGrid.min.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jquery-ui/jquery-ui.min.js?vpn-7" type="text/javascript" charset="utf-8"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/tag-it/tag-it.js?vpn-7"></script>
+<!-- èªå®ä¹ -->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/common.js?vpn-7&amp;v=1539"></script>
+<!-- æç¤ºçªå£ -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/zeroModal/zeroModal.js?vpn-7&amp;v=1539"></script>
+<!--jqgridè°æ´å®½åº¦-->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/jqgraid_resize.js?vpn-7&amp;v=1539"></script>
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/loading.js?vpn-7"></script>
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/showloading/jquery.showLoading.js?vpn-7"></script>
+
+<!--liudaxiaå®ä¹çjs-->
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/utils.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/myApp.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/app.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/menuUserAction.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/myProject.js?vpn-7&amp;v=1539"></script>
+
+<!--å¯ææ¬-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/component/ckeditor/ckeditor.js?vpn-7&amp;v=1539"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/component/ckeditor/ckeditorX.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/ajaxfileupload.js?vpn-7&amp;v=1539" type="text/javascript"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/select2/dist/js/i18n/zh-CN.js?vpn-7"></script>
+
+<!--éªè¯-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/jquery.validate.js?vpn-7"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/messages_zh.js?vpn-7"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/validata.js?vpn-7"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/card.js?vpn-7"></script>
+
+<script>vpn_eval((function(){
+
+	baseUrl = '';
+
+
+}
+).toString().slice(12, -2),"");</script>
+
+
+<script>vpn_eval((function(){
+
+	//退出
+	function beforeLogout(){
+		var info='您将要退出社会实践系统';
+		MyProject.showConfirm1(info,function(){
+			 MyProject.post("/f/j_spring_security_logout",function () {
+		         window.location.href = "/";
+		     });
+		});
+	}
+
+
+}
+).toString().slice(12, -2),"");</script>
+
+
+
+<script type="text/html" id="settings_tip">
+    <ul style="">
+        <li id="password" >个人信息</li>
+        <li id="slideThree">我的申请历史</li>
+    </ul>
+</script>
+<script type="text/html" id="roleList_li_tip">
+    <ul style="">
+		
+			<li id="shsj_yjs">研究生</li>			
+		
+    </ul>
+</script>
+<script>vpn_eval((function(){
+
+    $("#setting").hover(function() {
+
+        $("#setting").append('<div id="dw"></div>');
+        var mytabhtml = template('settings_tip', {});
+        $("#dw").html(mytabhtml);
+        // if(getCookie("wlxt|nav_font")&&getCookie("wlxt|nav_font")!=" "){
+        //     $("#slideThree").addClass('yes');
+        //     $("#slideThree").children('input').prop('checked', 'checked');
+        // }
+    }, function() {
+        // debugger;
+        /* Stuff to do when the mouse leaves the element */
+        $("#dw").remove('');
+
+    }).delegate('#password', 'click', function(event) {
+    	goToXxwh();
+        /* alert("修改密码") */
+
+    }).delegate('#slideThree', 'click', function(event) {
+    	goToSqls(); 
+    	/* alert("设置"); */
+    });
+    $("#roleList_li").hover(function() {
+
+        $("#roleList_li").append('<div id="dw"></div>');
+        var mytabhtml = template('roleList_li_tip', {});
+        $("#dw").html(mytabhtml);
+        // if(getCookie("wlxt|nav_font")&&getCookie("wlxt|nav_font")!=" "){
+        //     $("#slideThree").addClass('yes');
+        //     $("#slideThree").children('input').prop('checked', 'checked');
+        // }
+    }, function() {
+        // debugger;
+        /* Stuff to do when the mouse leaves the element */
+        $("#dw").remove('');
+
+    }).delegate('#shsj_swb', 'click', function(event) {
+       window.location.href="/f/main?role=shsj_swb";
+
+    }).delegate('#shsj_ygz', 'click', function(event) {
+		window.location.href="/f/main?role=shsj_ygz";
+
+    }).delegate('#shsj_jd', 'click', function(event) {
+		window.location.href="/f/main?role=shsj_jd";
+
+    }).delegate('#shsj_yjs', 'click', function(event) {
+		window.location.href="/f/main?role=shsj_yjs";
+
+    });
+  
+	//维护个人信息
+	function goToXxwh(){
+        zeroModal.show({
+            title: '个人信息', 
+            url: '/f/xtgl/v_xs_yjs_grxxb/xs/beforeView',
+            width: '800px',
+            height: '500px',
+            overlay: true,
+            ok: true,
+            okTitle:"提交",
+            cancel: true,
+            cancelTitle: "取消",
+            buttons: [{ className: 'btn btn-sub', name: '提交', fn:function(opt){
+            	var validate = MyProject.validateForm("editGrxxb",{
+                    rules:{
+                    	email:{
+                    		email:true,
+                    		required:true
+                        },
+                        lxdhsj:{
+                        	number:true,
+                    		minlength: 11,
+                    		maxlength: 11,
+                    		required:true
+                        }, 
+                        lxdhzj:{
+                        	required:true
+                        },ssdz:{
+                        	required:true
+                        }
+                    },                 
+                    messages:{
+                    	lxdhsj:'只能填写11位数字'
+                    }
+                });
+            	if(!validate){
+                    return false;
+                }
+                var addUrl = "/b/xtgl/v_xs_yjs_grxxb/xs/addOrEdit";    
+                MyProject.submit(addUrl,$("#editGrxxb"),function (data) {
+	                if (data.result == 'success') {
+	                    MyProject.showSuccess1(data.msg);
+	                } else {
+	                    MyProject.showError1(data.msg);
+	                }
+	            });
+	            return false;
+            }},{ className: 'btn', name: '取消', fn:function(opt){
+                
+            }}], 
+            onComplete: function() {				
+                
+            }
+        });
+	}
+	
+	//我的申请历史
+    function goToSqls(){	
+    	window.location.href="/f/xs/v_shsj_xs_xsxmb/yjs/beforePageList";	
+    }
+	
+           
+
+
+}
+).toString().slice(12, -2),"");</script>
+	<!--主体-->
+	<div class="content">
+		<form id="applyForm" name="applyForm">
+			<input type="hidden" id="xmid" name="xmid" value="26ef84e79cf5ad5f019d524f3443140d">
+			<div class="cot">
+				<div class="title">碰撞假人高逼真度仿生皮肤材料研发</div>
+				<div class="myrow">
+					
+					
+					 <span class="biaoqian"> 
+					</span>
+				</div>
+			</div>
+
+			<div class="cot_info">
+				<div class="">
+					<div class="panel-heading">
+						<i class="icon iconfont icon-biaotifuhao"></i><span>项目基本情况</span>
+					</div>
+					<div class="panel-body">
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>项目编号：</label> <span>74-2026-1043-1</span>
+								<!--<i class="bitian_star">*</i>-->
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>所属基地编号：</label> <span>74</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>所属基地名称：</label> <span>江苏苏州相城</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>研究方向：</label> <span>材料科学与工程、高分子材料与工程、生物医学工程、固体力学专业（有高分子材料配方研发、力学性能表征相关经验者为佳）</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>预计工作量(天)：</label> <span>天</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label class="mt-2">所需准备工作：</label> <span class="line-height-24">1. 熟悉高分子材料（硅橡胶）基础特性与配方设计原理；
+2. 掌握材料力学性能测试基本理论与方法；
+3. 了解人体皮肤生物力学基本特性与碰撞测试相关标准。
+								</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label class="mt-2">是否重点项目：</label> <span class="line-height-24">是
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="">
+					<div class="panel-heading">
+						<i class="icon iconfont icon-biaotifuhao"></i><span>单位信息</span>
+					</div>
+					<div class="panel-body">
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>单位名称：</label> <span>清华大学苏州汽车研究院（相城）</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-6">
+								<label>单位省市：</label> <span>江苏省</span>
+							</div>
+							<div class="col-md-6">
+								<label>单位区县：</label> <span>苏州市</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>单位地址：</label> <span>苏州市相城区高铁新城西公田路69号8幢20层</span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="">
+					<div class="panel-heading">
+						<i class="icon iconfont icon-biaotifuhao"></i><span>任务描述</span>
+					</div>
+					<div class="panel-body">
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label class="mt-2">项目背景：</label> <span class="line-height-24">碰撞测试假人是汽车被动安全、军工航空冲击测试的核心计量器具，其皮肤材料的生物力学逼真度直接决定假人测试数据的准确性与标定精度。目前国内假人皮肤材料长期依赖进口，自主研发的材料在静态拉伸、动态压缩、冲击滞后性等关键力学性能上，与欧美进口产品及真实人体皮肤存在显著差距，成为制约中国体征假人国产化替代的核心卡脖子问题。本项目面向我所中国体征碰撞假人产业化需求，开展高逼真度仿生皮肤材料的配方优化、性能表征与工艺适配性研究，解决现有假人皮肤材料力学性能对标不足的行业痛点，为国产假人核心部件的自主可控提供技术支撑。
+								</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>项目目标：</label> <span>1.揭示硅橡胶基复合材料配方与人体皮肤生物力学特性的匹配规律，完成假人皮肤材料基础配方优化；
+2.完成优化配方材料的静态/动态力学性能表征，实现与进口假人皮肤材料关键性能指标对标偏差≤10%；
+3.输出适配假人胸部/头部关键部位的仿生皮肤材料配方方案与成型工艺指导文件，形成可直接用于量产的技术规范。</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label>需要解决的关键技术问题：</label> <span>1.硅橡胶基高分子复合材料配方设计与力学性能精准调控方法；
+2.假人皮肤材料动态冲击响应与人体皮肤生物力学特性的对标体系构建；
+3.材料成型工艺参数对力学性能的影响规律与优化方法；
+4.仿生皮肤材料与柔性传感系统的集成适配性技术。</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label class="mt-2">现有条件：</label> <span class="line-height-24">研究院提供一对一专业导师指导，配备高性能办公电脑与材料仿真设计软件；开放高分子材料配方研发实验室、万能材料试验机、高低温落锤冲击测试平台、动态力学分析仪等全套研发设备；提供现有进口假人皮肤材料基准数据库、中国人体皮肤生物力学特性全量数据；配套完整的技术资料、原材料与试制条件。
+								</span>
+							</div>
+						</div>
+						<div class="row myrow">
+							<div class="col-md-12">
+								<label class="mt-2">时间安排：</label> <span class="line-height-24">第1周：熟悉项目背景、技术标准与研发平台，完成国内外相关文献调研与技术路线梳理；
+第2周：完成硅橡胶基复合材料基础配方设计，开展原材料筛选与基础试样制备；
+第3-4周：完成材料静态/动态力学性能测试，开展配方参数优化与性能对标分析；
+第5周：完成成型工艺参数优化，验证材料与假人结构的适配性，形成最终配方方案；
+第6周：完成项目总结报告、工艺规范编制，进行成果验收与优化。
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="btn_group btn_group_2">
+					<a class=" btn_sub btn_gray_b" onclick="var vpn_return;eval(vpn_rewrite_js((function () { window.close(); }).toString().slice(14, -2), 2));return vpn_return;">关闭</a>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<!--底部-->
+	
+<footer>清华大学 版权所有 2020</footer>
+	<!--引入的公共js-->
+	<script src="https://webvpn.tsinghua.edu.cn/https/77726476706e69737468656265737421f9f30f8834396657761d88e29d51367bcfe7/res/app/browser/checkBrowser.js?vpn-7"></script>
+<!-- Mainly scripts -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/jquery-2.1.1.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/bootstrap.min.js?vpn-7&amp;v=1539"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/laydate/laydate.js?vpn-7&amp;v=1539"></script>
+<!-- select2 -->
+<!--<link href="css/plugins/select2/select2.css" rel="stylesheet">-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/select2/select2.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/metisMenu/jquery.metisMenu.js?vpn-7&amp;v=1539"></script>
+<!-- Custom and plugin javascript -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/pace/pace.min.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/template.js?vpn-7&amp;v=1539"></script>
+<!-- jqGrid -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jqGrid/i18n/grid.locale-cn.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jqGrid/jquery.jqGrid.min.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/jquery-ui/jquery-ui.min.js?vpn-7" type="text/javascript" charset="utf-8"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/tag-it/tag-it.js?vpn-7"></script>
+<!-- èªå®ä¹ -->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/common.js?vpn-7&amp;v=1539"></script>
+<!-- æç¤ºçªå£ -->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/zeroModal/zeroModal.js?vpn-7&amp;v=1539"></script>
+<!--jqgridè°æ´å®½åº¦-->
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/jqgraid_resize.js?vpn-7&amp;v=1539"></script>
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/loading.js?vpn-7"></script>
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/showloading/jquery.showLoading.js?vpn-7"></script>
+
+<!--liudaxiaå®ä¹çjs-->
+
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/utils.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/myApp.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/app.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/menuUserAction.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/myProject.js?vpn-7&amp;v=1539"></script>
+
+<!--å¯ææ¬-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/component/ckeditor/ckeditor.js?vpn-7&amp;v=1539"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/component/ckeditor/ckeditorX.js?vpn-7&amp;v=1539"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/ajaxfileupload.js?vpn-7&amp;v=1539" type="text/javascript"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/select2/dist/js/i18n/zh-CN.js?vpn-7"></script>
+
+<!--éªè¯-->
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/jquery.validate.js?vpn-7"></script>
+<script type="text/javascript" src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/messages_zh.js?vpn-7"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/validata.js?vpn-7"></script>
+<script src="/http/77726476706e69737468656265737421e4ff52942e3a615170469dbf915b243ddde8bbb91b1c7df56e/res/app/project/js/plugins/validate/card.js?vpn-7"></script>
+
+<script>vpn_eval((function(){
+
+	baseUrl = '';
+
+
+}
+).toString().slice(12, -2),"");</script>
+
+
+
+
+
+
+
+
+
+</body><div id="transmart-crx-shadow-root" style="all: initial;"></div><div id="immersive-translate-browser-popup" style="all: initial"></div></html>
