@@ -3,3 +3,4 @@ node_modules/
 __pycache__/
 *.pyc
 output/
+data/raw/项目详情HTML/
